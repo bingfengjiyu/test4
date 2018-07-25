@@ -1,0 +1,30 @@
+{#{% load filter %}#}
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block main %}
+<ul>
+    <li>
+        用户名:{{ u.username }}
+    </li>
+    <li>
+        电话:{{ u.phone }}
+{#        电话:{{ u.phone|mod }}#}
+    </li>
+    <li>
+        邮箱:{{ u.email }}
+    </li>
+</ul>
+
+<form action="register" method="post">
+    <input type="submit" value="注册">
+</form>
+
+{% endblock main %}
+</body>
+</html>
